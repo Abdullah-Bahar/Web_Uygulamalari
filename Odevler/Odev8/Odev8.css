@@ -1,0 +1,13 @@
+.kosegen
+{
+    width: 400px;
+    height: 300px;
+    border-style: solid;    /*Çerçeve stili*/
+    border-width: 10px;     /*Çerçeve kalınlığı*/
+    border-bottom-left-radius: 30px;    /*sol altındaki yarıçap (koşe)*/
+    border-top-left-radius: 10px;       /*sol ustteki yarıçap (kose)*/
+    border-bottom-right-radius: 30px;   /**/
+    border-top-right-radius: 10px;      /**/
+    border-color: blueviolet; 
+    background-color: brown;
+}

@@ -1,0 +1,24 @@
+.sayfa
+{
+    display: flex; /*kutuuck konumu*/
+    flex-direction: column; /*hangi flex tipinde olucak*/
+    justify-content: center; /*içeriklerin konumu*/
+    align-items: center; /**/
+    margin-bottom: 25px;
+}
+
+.h1
+{
+    text-align: left;
+    margin-left: 30%; /*Sayfanın soldan sağa ne kadar gidecek*/
+}
+
+.colum
+{
+    width: 500px; /*içerik genişliği*/
+    margin: 20px;   /*Dış boşluk*/
+    padding: 25px;  /*İç boşluk*/
+    border: 2.5px solid black;
+    text-align: center;
+    font-size: 30px;
+}

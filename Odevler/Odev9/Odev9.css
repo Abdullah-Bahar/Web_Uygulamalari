@@ -1,0 +1,15 @@
+.sayfa
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.colum
+{
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid brown;
+    text-align: center;
+}
