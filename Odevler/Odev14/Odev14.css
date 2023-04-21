@@ -1,0 +1,66 @@
+/* caption-side: top;           -->     Tablo başlığının kkonumu */
+/* border-collapse: collapse;   -->     hücreleri oluşturan kenarlıklar tek çizgi şeklinde gözükür. */
+/* table-layout: fixed;         -->     Bütün sütunlar eşit genişlikte olur */
+/* vertical-align: center, top, bottom      --> Dikey hizalam  */ 
+/* border-spacing   ?? */
+/* empty-cells      ?? */
+
+body
+{
+    background-color: navajowhite;
+}
+
+#cap
+{
+    font-size: 150%;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    margin-bottom: 15px;
+}
+
+.Tablo
+{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 2px solid black;
+}
+
+.Tablo th, td
+{
+    text-align: left;
+    border-bottom: 1.5px solid black;
+    padding: 10px;
+}
+
+.Tablo th
+{
+    background-color: crimson;
+    font-size: 120%;
+} 
+
+.Tablo td
+{
+    font-size: 110%;
+}
+
+tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd)
+{
+    background-color: white;
+} 
+
+tr:hover
+{
+    background-color: coral;
+}
+
+
+
+
+
+

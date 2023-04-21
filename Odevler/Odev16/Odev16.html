@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODEV 16</title>
+</head>
+<body>
+
+    <h1>Aşağıdaki Fonksiyonları Hesaplama</h1>
+    <p>
+        f(x) = 2x <br>
+        g(x) = 5x + 6 <br>
+        f[g(x)]
+    </p>
+    <br>
+
+    <label for="word">Lütfen Bir Sayı Giriniz :</label>
+    <input type="number" id="inputNum">
+    <button onclick="hesapla()" >HESAPLA</button>
+    
+    <p>
+        f(x) = 2x değeri : <span id="fx"></span> <br>
+        g(x) = 5x + 6 : <span id="gx"></span> <br>
+        f[g(x)] : <span id="fgx"></span>
+    </p>
+
+
+    <script>
+
+        function f(x) 
+        {
+            return 2 * x;
+        }
+        function g(x) 
+        {
+            return (5 * x) + 6;
+        }
+        function hesapla() 
+        {
+            var inputNum = document.getElementById("inputNum").value;  
+            var fx = f(inputNum);
+            var gx = g(inputNum);
+            var fgx = f(g(inputNum));  
+
+            document.getElementById("fx").innerHTML = fx;
+            document.getElementById("gx").innerHTML = gx;
+            document.getElementById("fgx").innerHTML = fgx;
+        }
+    </script>
+
+     
+    
+
+    
+</body>
+</html>

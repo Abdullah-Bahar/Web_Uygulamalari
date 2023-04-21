@@ -1,0 +1,50 @@
+.Baslik
+{
+    position: relative;
+    background-color: cadetblue;
+    border-top-right-radius: 6em;
+    border-top-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-bottom-left-radius: 6em;
+}
+
+.Baslik
+{
+    width: 300px;
+    height: 250px;
+    padding: 40px 30px;  
+    margin: 70px; 
+    text-align: center;
+    color: darkgray;
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.Baslik::after
+{
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: o;
+    border: 40px solid transparent;
+    border-right-color: cadetblue;
+    border-top-color: white;
+    border-bottom-color: white;
+    border-left: 0;
+    border-bottom: o;
+    margin-top: -95px;
+    margin-left: -40px;
+}
+
+.Baslik h1
+{
+    color: rgb(29, 6, 50);
+    font-size: 200%;
+}
+.Baslik h3
+{
+    color: rgb(38, 14, 74);
+    font-size: 120%;
+}

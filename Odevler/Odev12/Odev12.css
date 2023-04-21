@@ -1,0 +1,79 @@
+*
+{
+    box-sizing: border-box;
+}
+
+.Month
+{
+    padding: 70px 25px;
+    width: 100%;
+    background-color: rgb(146, 110, 63);
+    text-align: center;
+}
+
+.Month ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+.Month ul li 
+{
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.Month .geri
+{
+    float: left;
+    padding-top: 10px;
+}
+
+.Month .ileri
+{
+    float: right;
+    padding-top: 10px;
+}
+
+.WeekDays
+{
+    margin: 0;
+    padding: 10px;
+    background-color: rgb(226, 181, 121);
+}
+
+.WeekDays li
+{
+    display: inline-block;
+    width: 13.6%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.Days
+{
+    margin: 10px o;
+    background-color: rgb(240, 234, 185);
+    margin: 0;
+}
+
+.Days li
+{
+    display: inline-table;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: black; 
+}
+
+.Days li .active
+{
+    padding: 5px;
+    background-color: rgb(146, 110, 63);
+    color: white !important
+}
+
+

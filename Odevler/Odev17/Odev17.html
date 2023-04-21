@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODEV 17</title>
+</head>
+<body>
+    
+    <h1 style="font-size: 170%;">Girilen Sayıalrın Toplamını Yapan HTML sayfası</h1>   
+    <table>
+        <tr>
+            <td>
+                <label for="word">1. Sayıyı giriniz :</label>
+            </td>
+            <td>
+                <input type="number" id="num1">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="word">2. Sayıyı giriniz :</label>
+            </td>
+            <td>
+                <input type="number" id="num2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="word">3. Sayıyı giriniz</label>
+            </td>
+            <td>
+                <input type="number" id="num3">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="word">4. Sayıyı giriniz :</label>
+            </td>
+            <td>
+                <input type="number" id="num4">
+            </td>
+        </tr>
+    </table>
+    <button onclick="toplama()">TOPLAMA</button>
+    <p>
+        SONUC = <span id="sonuc"></span>
+    </p>
+
+
+    <script>
+
+        function toplama() {
+            var s1 = parseFloat(document.getElementById("num1").value);
+            var s2 = parseFloat(document.getElementById("num2").value);
+            var s3 = parseFloat(document.getElementById("num3").value);
+            var s4 = parseFloat(document.getElementById("num4").value);
+            var toplam = s1 + s2 + s3 + s4;
+            
+            document.getElementById("sonuc").innerHTML = toplam;
+        }
+
+    </script>
+
+</body>
+</html>
