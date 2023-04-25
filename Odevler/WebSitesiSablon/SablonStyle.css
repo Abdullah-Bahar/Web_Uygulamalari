@@ -1,0 +1,166 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.header
+{
+    border: 3px solid black;
+    margin: 15px 30px;
+}
+
+.header h1
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1.5px solid black;
+    padding: 5px;
+    margin-top: 10px ;
+    margin-bottom: 10px;
+    margin-left: 360px;
+    margin-right: 440px; /*
+    text-align: center; */
+}
+
+.header .nav
+{
+    border: 2px solid black;
+    margin: 10px 15px;
+}
+
+.nav
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav h2
+{
+    border: 1.5px solid black;
+    padding: 5px;
+}
+
+.menu
+{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    border: 3px solid black;
+    margin: 15px 30px;
+}
+
+.menu #satir1
+{
+    border: 1.5px solid black;
+    padding: 5px;
+    margin-top: 10px ;
+    margin-bottom: 10px;
+    margin-left: 480px;
+    margin-right: 580px;
+    text-align: center;
+}
+
+.menu .section
+{
+    border: 1.5px solid black;
+    /* margin: 10px; */
+    padding: 10px;
+    margin: 25px;
+}
+
+.menu .aside
+{
+    border: 1.5px solid black;
+    margin: 50px;
+    padding: 10px;
+}
+
+.menu .section .article
+{
+    border: 1.5px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.menu .section .article p
+{
+    border: 1.5px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+#colum1, #colum2, #colum3, #colum4
+{
+    width: 80%;
+}
+
+.menu div h3
+{
+    margin-left: 10px;
+}
+
+.menu div div h4
+{
+    margin-left: 10px;
+}
+
+.menu .aside p
+{
+    font-size: 150%;
+    border: 1.5px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.menu .aside h2
+{
+    margin-left: 10px;
+}
+
+.footer
+{
+    border: 3px solid black;
+    margin: 15px 30px;
+}
+    
+.footer h2
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1.5px solid black;
+    padding: 5px;
+    margin-top: 10px ;
+    margin-bottom: 10px;
+    margin-left: 380px;
+    margin-right: 460px;
+}
+
+.footer p
+{
+    font-size: 150%;
+    margin: 10px;
+    padding-right: 50px;
+    text-align: center;
+}
+
+.header .nav .logo
+{
+    font-size: 220%;
+}
+
+.header .nav .menubar p
+{
+    font-size: 150%;
+}
+
+.menu .section  .article p
+{
+    font-size: 150%;
+}
+
