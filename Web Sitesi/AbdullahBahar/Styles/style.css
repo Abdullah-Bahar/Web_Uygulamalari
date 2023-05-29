@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&family=Roboto:wght@100;300&display=swap');
+
+:root
+{
+    --main-color: #D2B48C  ; 
+    --black-color: #0e0e0e;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.6);
+}
+
+
+*
+{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;     /* genislik/yukseklik = border + padding */
+    outline: none;              /* varsayilan olarak uygulanan dis hat cizgilerini kaldirir */
+    border: none;
+    text-decoration: none;      /* satir uzerindeki cizgileri kaldirir */
+    text-transform: capitalize; /* ilk harf buyuk yapma */
+    transition: 0.2s ease;
+}
+
+
+/* base html codes */
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden;         /* alt scroll'u kaldirir */
+    scroll-padding-top: 9rem;   
+    scroll-behavior: smooth;    /* kaydirma islemi daha yumusak gerceklesir */
+}
+
+html::-webkit-scrollbar
+{
+    width: 0.8rem;
+    background-color: #fff;
+}
+
+html::-webkit-scrollbar-thumb
+{
+    background-color: #767676;
+}
+
+html::-webkit-scrollbar-track
+{
+    background-color: transparent;
+}
+
+
+body
+{   
+    border-radius: 3rem ;
+    background-color: var(--main-color);
+}
+
+section
+{
+    padding: 3.5rem 5%;
+}
+
+a
+{   
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+
+/* header start */
+.header .logo img
+{
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.header
+{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;     /* flex yapısı içerisindekileri yatay olarak ayarlar*/
+    padding: 0 5%;
+    margin: 2rem 6%;
+    border-radius: 30rem;
+    box-shadow: 0px 0px 20px -2px rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .navbar a
+{
+    font-size: 1.6rem;
+    margin: 0 1rem;
+    color: var(--black-color);
+    border-bottom: 0.15rem solid transparent;
+}
+
+.header .navbar .active,
+.header .navbar a:hover
+{
+    border-color: var(--main-color);
+    padding-bottom: 0.25rem;
+}
+
+#menu-btn
+{
+    font-size: 2.5rem;
+    display: none;
+}
+/* header end */
+
+
+
+/* home start */
+
+.home
+{
+    display: flex;
+    align-items: center;
+}
+
+.home .content
+{
+    display: flex;
+    flex-wrap: wrap;        /* Satir tasması durumunda alt satıra gec */
+    column-gap: 2rem;       /* sutun arasi bosluk */
+}
+
+.home .content .text
+{
+    flex: 1 1 45%;
+}
+
+.home .content .text h3
+{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: var(--black-color) ;
+}
+
+.home .content .text p
+{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--black-color);
+}
+
+.home .content .images
+{
+    flex: 1 1 45%;
+    position: relative;
+    height: 400px; 
+    overflow: hidden;
+}
+
+.home .content .images img 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+    /* border-radius: 5%; */
+}
+
+.home .content .images .active 
+{
+    opacity: 1;
+}
+/* home end */
+
+
+
+
+/* menu start */
+.heading
+{
+    font-size: 4rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 3.5rem;
+    margin-top: 3rem;
+    border-bottom: 0.2rem solid var(--black-color);
+}
+
+.heading span
+{
+    text-transform: uppercase;
+    color: var(--black-color);
+}
+
+.heading-two
+{
+    font-size: 4rem;
+    color: var(--black-color);
+    text-transform: uppercase;
+    margin-bottom: 3.5rem;
+    border-bottom: 0.2rem solid var(--black-color);
+}
+
+.heading-two span
+{
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.menu-list-wrapper
+{
+    position: relative;
+}
+
+.menu-list
+{
+    list-style: none;
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    column-gap: 3rem;
+    transform: translateX(0);
+    transition: 1s all ease-in-out;
+}
+
+.menu-list .menu-item
+{
+    position: relative;
+}
+
+.menu-list .menu-item:hover .menu-item-content p,
+.menu-list .menu-item:hover .menu-item-content h3
+{
+    opacity: 1;
+}
+
+.menu-list .menu-item:hover .menu-item-img
+{
+    transform: scale(1.1);
+    margin: 0 3rem;
+    opacity: .5;
+}
+
+.menu-item-img
+{
+    width: 36rem;
+    height: 30rem;
+    object-fit: cover;
+    transition: 1s all ease-in-out;
+}
+
+.menu-item .menu-item-content h3
+{
+    background-color: rgba(40, 40, 40, 0.4);
+    padding: 0 1rem;
+    font-size: 3rem;
+    font-weight: bold;
+    position: absolute;
+    top: 15%;
+    left: 2rem;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.menu-item .menu-item-content p
+{
+    padding: 0 1rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    position: absolute;
+    bottom: 15%;
+    left: 2rem;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.arrow
+{
+    width: 100;
+    display: flex;
+    font-size: 14rem;
+    position: absolute;
+    right: -2rem;
+    top: 10rem;
+    opacity: .5;
+    transition: .5s ease all;
+    cursor: pointer;
+}
+
+.arrow:hover
+{
+    opacity: 1;
+}
+/* menu end */
+
+
+/* about start */
+.about .hakkimizda .row .content h3
+{
+    font-size: 3rem;
+    color: #0e0e0e;
+}
+
+.about .hakkimizda .row .content p
+{
+    font-size: 1.6rem;
+    color: #0e0e0e;
+    padding: 2rem 0;
+    line-height: 1.8;
+}
+
+.about .foto-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+}
+
+.about .foto-container .resim
+{
+    width: 27rem;
+    height: 20rem;
+    padding: 1rem 0;
+}
+/* about end */
+
+
+
+/* contact start */
+.contact .row .map {
+    width: 100%;
+    height: 50rem;
+    border: 0.1rem solid black;
+    margin-bottom: 2rem;
+}
+
+.contact .iletisim form {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: #45351F;
+}
+
+.contact .iletisim form h3 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.contact .iletisim form .inputBox {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    border: var(--border);
+}
+
+.contact .iletisim form .inputBox i {
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .iletisim form .inputBox input,
+.contact .iletisim form .inputBox textarea {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.contact .iletisim form .inputBox textarea {
+    resize: vertical;
+    min-height: 150px;
+    max-height: 300px;
+}
+
+.contact .iletisim form .btn {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 2rem 3.75rem;
+    border-radius: 30rem;
+    font-size: 2rem;
+    color: var(--black-color);
+    background-color: var(--main-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact .iletisim form .btn:hover
+{
+    background-color: var(--black-color);
+    color: var(--main-color);
+    border: 0.1rem solid white;
+}
+/* contact end */
+
+
+
+
+/* ptodact start */
+.siparis .content
+{
+    font-size: 3rem;
+}
+
+.siparis .content #phone-number
+{
+    display: none;
+    font-weight: bold;
+}
+
+.siparis .content .btn
+{
+    margin-top: 1.5rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 30rem;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    background-color: var(--black-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.siparis .content .btn:hover
+{
+    background-color: #fff;
+    color: var(--black-color);
+    border: 0.1rem solid white;
+}
+/* ptodact start */
+
+
+
+/* ptodact start */
+.products .box-container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;  
+}
+
+.products .box-container .box
+{
+    padding: 3rem;
+    border-radius: 3rem;
+    background-color: #fff;
+    min-height: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.products .box-container .box a
+{
+    pointer-events: none;
+    cursor: default;   
+}
+
+.products .box-container .box img
+{
+    width: 100%;
+    object-fit: cover;
+}
+
+.products .box-container .box h3
+{
+    font-size: 3rem;
+    padding: 1rem 0;        
+}
+
+.products .box-container .box p
+{
+    font-size: 1.5rem;   
+}
+
+.products .box-container .box .price
+{
+    font-size: 2.5rem;
+    padding: 0.5rem 0;        
+}
+
+.products .box-container .box .price span
+{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: 300;        
+}
+/* prodact end */
+
+
+
+
+/* footer start */
+.footer
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--black-color);
+    padding: 1rem;
+}
+
+.footer .share
+{
+    padding: 2rem 0;
+}
+
+.footer .share a
+{
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    color: white;
+    font-size: 2.5rem;
+    border: var(--border);
+    border-radius: 50%;
+    margin: 0.3rem;
+}
+
+.footer .share a:hover
+{
+    background-color: var(--main-color);
+}
+
+.footer .links
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer .links a
+{
+    background-color: var(--main-color);
+    padding: 0.7rem 2rem;
+    color: var(--black-color);
+    font-size: 2rem;
+    border: var(--border);
+}
+
+.footer .links a:hover
+{
+    background-color: var(--black-color);
+    color: white;
+}
+
+.footer .links a.active
+{
+    background-color: var(--black-color);
+    color: white;
+}
+
+.footer .credit
+{
+    font-size: 2rem;
+    color: white;
+    font-weight: 300;
+    padding-top: 1.5rem;  
+}
+
+.footer .credit marquee
+{
+    white-space: nowrap;
+    width: 100%;
+    animation: marquee 15s linear infinite;
+}
+
+.footer .credit span
+{
+    box-shadow: none;
+    color: var(--black-color);
+    text-shadow: 0 0 5px #fff, 
+    0 0 10px #fff, 
+    0 0 10px #D2B48C, 
+    0 0 10px #D2B48C, 
+    0 0 10px #D2B48C,
+    0 0 10px #D2B48C,
+    0 0 10px #D2B48C;;
+}
+/* footer end */
+
