@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veri İşlemleri</title>
+    <style>
+        form {
+            display: grid;
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        form label {
+            display: block;
+        }
+
+        form input[type="text"],
+        form textarea {
+            width: 100%;
+        }
+
+        #gonderBtn,
+        #veriCekBtn {
+            margin-top: 10px;
+        }
+
+        #veriCekmeAlani {
+            margin-top: 20px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <form id="myForm">
+        <label for="ad">Ad:</label>
+        <input type="text" id="ad" name="ad">
+
+        <label for="soyad">Soyad:</label>
+        <input type="text" id="soyad" name="soyad">
+
+        <label for="ogrenciNo">Öğrenci No:</label>
+        <input type="text" id="ogrenciNo" name="ogrenciNo">
+
+        <label for="bolum">Bölüm:</label>
+        <input type="text" id="bolum" name="bolum">
+
+        <label for="aciklama">Açıklama:</label>
+        <textarea id="aciklama" name="aciklama"></textarea>
+
+        <input type="button" id="gonderBtn" value="Veri Gönder">
+    </form>
+
+    <button id="veriCekBtn">Veri Çek</button>
+
+    <div id="veriCekmeAlani"></div>
+
+    <script>
+        $(document).ready(function() {
+            // Veri gönderme işlemi
+            $("#gonderBtn").click(function() {
+                var ad = $("#ad").val();
+                var soyad = $("#soyad").val();
+                var ogrenciNo = $("#ogrenciNo").val();
+                var bolum = $("#bolum").val();
+                var aciklama = $("#aciklama").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "ajax.php",
+                    data: {
+                        ad: ad,
+                        soyad: soyad,
+                        ogrenciNo: ogrenciNo,
+                        bolum: bolum,
+                        aciklama: aciklama
+                    },
+                    success: function(response) {
+                        alert("Veri başarıyla gönderildi!");
+                    },
+                    error: function() {
+                        alert("Veri gönderme hatası!");
+                    }
+                });
+            });
+
+            // Veri çekme işlemi
+            $("#veriCekBtn").click(function() {
+                $.ajax({
+                    type: "GET",
+                    url: "ajax.php",
+                    success: function(response) {
+                        $("#veriCekmeAlani").html(response);
+                    },
+                    error: function() {
+                        alert("Veri çekme hatası!");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
