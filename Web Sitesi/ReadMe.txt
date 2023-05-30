@@ -2,7 +2,7 @@ Ad: Abdullah
 
 Soyad: Bahar
 
-Öğrenci No: 200031017 (buraya yuklenen fotoğrafta yanlış yazılmıştır. Buradaki doğrudur.)
+Öğrenci No: 200031017
 
 Bölüm: Bilgisayar Programcılığı
 
