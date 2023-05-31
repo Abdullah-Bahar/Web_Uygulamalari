@@ -18,7 +18,7 @@ Açıklama: MBP 106 Web Uygulamaları Projem Şunları İçerir :
 * Bizden istenen prıje'de olması gerekenler yukarıda belirtilmiştir.  Ayrıca bizden istenen sayfadan "veri çekme" işlemi (pdf'deki 7. madde),
 proje içinde projenin görünümünü bozduğundan ötürü eklenmemiş, farklı bir proje üzerinde "veri çekme" ve "veri girme" işlemleri xaamp kullanılarak
 yapılmıştır ve sisteme yüklenmiştir yüklenmiştir. 
-* Şablon tesliminde belirtilenin belli konularda dışına çıkılmıştır :
+* Şablon tesliminde belirtilenin belli konularda dışına çıkılmıştır :  (nazmiye hoca, koymamamın gerekliliğini beyan edince onayladı.)
 - "aside" kullanılmamıştır.
 - "article" kullanılmamıştır.
 (Kullanılmasına gerek duyulmadığı için kullanılmamıştır.)
